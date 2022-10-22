@@ -3,24 +3,28 @@ import axios from "axios";
 import MovieCard from "../components/MovieCard.js"
 
 function Home() {
- // const [setMovie] = 
+ const [movieData, setMovieData] = useState([]);
   useEffect (() => {
    
     axios
-        .get(`https://ghibliapi.herokuapp.com/species?name=spirit`)
+        .get(`https://ghibliapi.herokuapp.com/films`)
         .then(function (response) {
+          setMovieData(response.data);
           
-          console.log(response)
         })
         .catch(function (error) {
-          //console.warn(error);
+        
             
         });
   }, []);
 
   return (
-    <h1> Hi</h1>
-  )
+    <div>
+      {movieData.map((movie, i) => (
+        <MovieCard movieName={movie} key={i} />
+    ))}
+    </div>
+  );
 }
   
 
