@@ -17,7 +17,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div style={{ backgroundImage: "url(/img/bg.jpg)", backgroundSize: "100%" }}>
       {movieData.map((movie, i) => (
         <MovieCard movieName={movie} key={i} />
     ))}
@@ -26,6 +26,5 @@ function Home() {
     
   );
 }
-  
 
 export default Home;
