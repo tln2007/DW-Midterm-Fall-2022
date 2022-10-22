@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/movie/:id",
+    path: "/movie",
     element: <Movie />,
   },
 ]);
@@ -18,7 +18,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <h1>Studio Ghibli</h1>
       <RouterProvider router={router} />
     
     </div>

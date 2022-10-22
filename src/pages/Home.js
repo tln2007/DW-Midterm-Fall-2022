@@ -13,8 +13,6 @@ function Home() {
           
         })
         .catch(function (error) {
-        
-            
         });
   }, []);
 
@@ -23,7 +21,9 @@ function Home() {
       {movieData.map((movie, i) => (
         <MovieCard movieName={movie} key={i} />
     ))}
+
     </div>
+    
   );
 }
   

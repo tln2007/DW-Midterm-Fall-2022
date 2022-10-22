@@ -1,13 +1,11 @@
 import React from "react";
-import Soundtrack from '../components/Soundtrack';
 
 
 function Movie() {
     return (
       <div className="MoviePage">
+        <h2>hi</h2> 
         
-        
-      
       </div>
     );
   }

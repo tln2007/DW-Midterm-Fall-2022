@@ -5,7 +5,7 @@ function MovieCard({ movieName }) {
         <div className="MovieCard">
             {/* <h2>{movieName.title}</h2> */}
             <div className="MovieCard--poster">
-                <img src = {movieName.image}></img>
+                <a href="/movie"><img src = {movieName.image}></img></a>
             </div>
             
 
