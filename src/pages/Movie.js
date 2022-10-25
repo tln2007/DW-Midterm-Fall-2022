@@ -2,10 +2,10 @@ import React, { useEffect, useMemo, useState }  from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import Soundtrack from '../components/Soundtrack';
+import Backgrounds from "../components/Backgrounds";
 
 function Movie() {
   const { id } = useParams();
-
 
   const [movieData, setMovieData] = useState([]);
     useEffect (() => {
@@ -14,7 +14,6 @@ function Movie() {
       .get(`https://ghibliapi.herokuapp.com/films/${id}`)
       .then(function (response) {
         setMovieData(response.data);
-        console.log(response)
           
       })
       .catch(function (error) {
@@ -26,7 +25,13 @@ function Movie() {
       song.id === movieData.title
     ))
   }, [movieData]);
-console.log(musicData);
+
+  const imgData = useMemo (() => {
+    return Backgrounds.find((image) => (
+      image.id === movieData.title
+    ))
+  }, [movieData]);
+    
 
   return (
     <div className="MoviePage">
@@ -34,10 +39,16 @@ console.log(musicData);
       <audio autoPlay>
         <source src={`/assets/${musicData.ost.src}`} type={musicData.ost.type}/>
       </audio> }
-      <h1>{movieData.title}</h1>
+   
+      <div className="MoviePage--background" style={{backgroundImage: `url('${imgData.image.src}')`, backgroundSize: "cover"}}>
+        <h1>{movieData.title}</h1>
+      </div> 
+      
+      
         
     </div>
   );
 }
+console.log(imgData)
 
 export default Movie;
