@@ -17,7 +17,7 @@ function Home() {
   }, []);
 
   return (
-    <div style={{ backgroundImage: "url(/img/bg.jpg)", backgroundSize: "100%" }}>
+    <div style={{ backgroundImage: "url(/img/bg.jpg)" }}>
       {movieData.map((movie, i) => (
         <MovieCard movieName={movie} key={i} />
     ))}
