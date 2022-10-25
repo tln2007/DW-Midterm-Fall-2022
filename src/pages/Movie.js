@@ -1,13 +1,17 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useMemo, useState }  from "react";
+import { useParams } from "react-router";
 import axios from "axios";
-
+import Soundtrack from '../components/Soundtrack';
 
 function Movie() {
+  const { id } = useParams();
+
+
   const [movieData, setMovieData] = useState([]);
     useEffect (() => {
    
     axios
-      .get(`https://ghibliapi.herokuapp.com/films`)
+      .get(`https://ghibliapi.herokuapp.com/films/${id}`)
       .then(function (response) {
         setMovieData(response.data);
         console.log(response)
@@ -17,15 +21,20 @@ function Movie() {
       });
   }, []);
 
+  const musicData = useMemo (() => {
+    return Soundtrack.find((song) => (
+      song.id === movieData.title
+    ))
+  }, [movieData]);
+console.log(musicData);
+
   return (
     <div className="MoviePage">
-      <h1>Hi</h1>
-      {movieData.map((movieName, i) => {
-        if (i === 0) {
-          return <h2>{movieName.title}</h2> 
-        }
-        
-      })}
+      {musicData && 
+      <audio autoPlay>
+        <source src={`/assets/${musicData.ost.src}`} type={musicData.ost.type}/>
+      </audio> }
+      <h1>{movieData.title}</h1>
         
     </div>
   );

@@ -17,13 +17,14 @@ function Home() {
   }, []);
 
   return (
-    <div style={{ backgroundImage: "url(/img/bg.jpg)" }}>
-      {movieData.map((movie, i) => (
-        <MovieCard movieName={movie} key={i} />
-    ))}
+    <div className="background">
+      <div className="MovieCardWrapper">
+        {movieData.map((movie, i) => (
+          <MovieCard movie={movie} key={i} />
+      ))}
 
+      </div>
     </div>
-    
   );
 }
 
