@@ -1,8 +1,12 @@
 .background {
     background-image: url("./components/bg.jpg");
     background-size: cover;
+    
 }
 
+.h1 {
+    text-align: center;
+}
 .MovieCardWrapper {
     display:flex;
     flex-flow: row wrap;
@@ -11,13 +15,13 @@
 }
 
 .MovieCard {
-    flex-basis: 20%;
+    flex-basis: 15%;
+    padding: 5px;
 }
 
 .MovieCard--poster img {
     height: auto;
     width: 100%;
-    
    
 }
 

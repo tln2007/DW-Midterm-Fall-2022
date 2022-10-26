@@ -18,7 +18,9 @@ function Home() {
 
   return (
     <div className="background">
+      
       <div className="MovieCardWrapper">
+        
         {movieData.map((movie, i) => (
           <MovieCard movie={movie} key={i} />
       ))}

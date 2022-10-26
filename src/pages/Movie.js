@@ -26,12 +26,14 @@ function Movie() {
     ))
   }, [movieData]);
 
-  const imgData = useMemo (() => {
-    return Backgrounds.find((image) => (
-      image.id === movieData.title
-    ))
-  }, [movieData]);
-    
+  // const imgData = useMemo (() => {
+  //   return Backgrounds.find((image) => (
+  //     image.id === movieData.title
+  //   ))
+  // }, [movieData]);
+  
+  console.log(movieData);
+
 
   return (
     <div className="MoviePage">
@@ -40,15 +42,16 @@ function Movie() {
         <source src={`/assets/${musicData.ost.src}`} type={musicData.ost.type}/>
       </audio> }
    
-      <div className="MoviePage--background" style={{backgroundImage: `url('${imgData.image.src}')`, backgroundSize: "cover"}}>
-        <h1>{movieData.title}</h1>
-      </div> 
+      {/* <div className="MoviePage--background" style={{backgroundImage: `url('${imgData.image.src}')`, backgroundSize: "cover"}}>
+        
+      </div>  */}
       
-      
+      <h2>{movieData.title}</h2>
+      <h2>{movieData.original_title}</h2>
+      <p>{movieData.description}</p>
         
     </div>
   );
 }
-console.log(imgData)
 
 export default Movie;
