@@ -5,14 +5,23 @@
     background: radial-gradient(circle, rgba(201,217,185,1) 19%, rgba(172,190,231,1) 46%, rgba(3,55,98,1) 92%);
 }
 
+.background h1 { 
+    color: white;
+    font-family: 'Irish Grover', cursive;
+    font-size: 70px;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+    text-shadow: 2px 2px #0B0B45;
+}
+
 .MovieCardWrapper {
     display:flex;
     flex-flow: row wrap;
-    max-width: 1000px;
+    justify-content: center;
     margin: 0 auto;
+    max-width: 1200px;
 }
-
-
 
 .MovieCard {
     flex-basis: 18%;
@@ -21,8 +30,7 @@
 
 .MovieCard--poster img {
     height: auto;
-    width: 100%;
-   
+    width: 100%;  
 }
 
 .MovieCard--poster img:hover {
@@ -33,9 +41,10 @@
 
 .MoviePage--background {
     display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    
+    min-height: 100vh;
 }
 
 .MoviePage--title {
@@ -50,9 +59,17 @@
     color: white;
     font-family: 'Lilita One', cursive;
     font-size: 30px;
-    margin: 60px;
-    margin-top: -40px;
+    margin: 0 auto;
+    max-width: 1200px;
     text-shadow: 3px 3px #0B0B45;
 }
 
+.MoviePage--animate {
+    animation: myAnimation 5s 1;
+}
+
+@keyframes myAnimation {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0%);}
+}
 

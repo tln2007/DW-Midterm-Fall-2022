@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider, Route, } from "react-router-dom";
 import Home from "./pages/Home";
 import Movie from "./pages/Movie";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-    
     </div>
   );
 }

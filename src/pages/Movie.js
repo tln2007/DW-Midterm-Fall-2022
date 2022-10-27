@@ -33,8 +33,6 @@ function Movie() {
     ))
   }, [movieData]);
 
-  console.log(imgData)
-
   return (
     <div className="MoviePage">
       {imgData && 
@@ -51,7 +49,7 @@ function Movie() {
         <div className="MoviePage--content">
           <p>{movieData.description}</p>
         </div>
-        <div className="MoviePage--pngs">
+        <div className={movieData.title === "Kiki's Delivery Service" && "MoviePage--animate"}>
           {imgData &&
           <img src={`/images/${imgData.characters.src}`}>
           </img> }
@@ -62,6 +60,5 @@ function Movie() {
     </div>
   );
 }
-
 
 export default Movie;
