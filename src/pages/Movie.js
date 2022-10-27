@@ -33,6 +33,7 @@ function Movie() {
     ))
   }, [movieData]);
 
+  console.log(imgData)
 
   return (
     <div className="MoviePage">
@@ -61,5 +62,6 @@ function Movie() {
     </div>
   );
 }
+
 
 export default Movie;

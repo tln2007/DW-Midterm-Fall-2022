@@ -35,7 +35,7 @@ export default [
     {
         "id": "Kiki's Delivery Service",
         "image": {
-            "src": "kiki's delivery service bg.jpg",
+            "src": "clouds bg.jpg",
             "alt": "Kiki's Delivery Service background"
         },
         "characters": {
@@ -83,7 +83,7 @@ export default [
             "alt": "Whisper of the Heart background"
         },
         "characters": {
-            "src": "yuko.png",
+            "src": "whisper.png",
             "alt": "whisper of the heart characters"
         }
     },
@@ -105,7 +105,7 @@ export default [
             "alt": "My Neighbors the Yamadas background"
         },
         "characters": {
-            "src": null,
+            "src": "the yamadas.png",
             "alt": "my neighbor the yamadas"
         }
     },
@@ -134,7 +134,7 @@ export default [
     {
         "id": "Howl's Moving Castle",
         "image": {
-            "src": "howl's moving castle bg.jpg",
+            "src": "moving castle bg.jpg",
             "alt": "Howl's Moving Castle background"
         },
         "characters": {
@@ -189,7 +189,7 @@ export default [
     {
         "id": "The Wind Rises",
         "image": {
-            "src": "the wind rises bg.jpg",
+            "src": "the wind rises bg.png",
             "alt": "The Wind Rises background"
         },
         "characters": {
@@ -226,7 +226,7 @@ export default [
             "alt": "The Red Turtle background"
         },
         "characters": {
-            "src": null,
+            "src": "turtle.png",
             "alt": "red turtle characters"
         }
     },
@@ -237,7 +237,7 @@ export default [
             "alt": "Earwig and the Witch background"
         },
         "characters": {
-            "src": null,
+            "src": "earwig.png",
             "alt": "the witch"
         }
     },

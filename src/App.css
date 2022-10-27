@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 .background {
-    background-image: url("./components/bg.jpg");
-    background-size: cover;
+    background: rgb(201,217,185);
+    background: radial-gradient(circle, rgba(201,217,185,1) 19%, rgba(172,190,231,1) 46%, rgba(3,55,98,1) 92%);
 }
 
 .MovieCardWrapper {
@@ -13,7 +13,7 @@
 }
 
 .MovieCard {
-    flex-basis: 15%;
+    flex-basis: 18%;
     padding: 5px;
 }
 
@@ -38,7 +38,7 @@
 .MoviePage--title {
     color: white;
     font-family: 'Irish Grover', cursive;
-    font-size: x-large;
+    font-size: 50px;
     text-align: center;
     text-shadow: 2px 2px #0B0B45;
 }

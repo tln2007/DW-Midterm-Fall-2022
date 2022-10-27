@@ -138,5 +138,20 @@ export default [
             "src": "when marnie was there.mp3",
             "type": "audio/mpeg"
         }
+    },
+    {
+        "id": "The Red Turtle",
+        "ost": {
+            "src": "the red turtle.mp3",
+            "type": "audio/mpeg"
+        }
+    },
+    {
+        "id": "Earwig and the Witch",
+        "ost": {
+            "src": "earwig and the witch.mp3",
+            "type": "audio/mpeg"
+        }
     }
+    
 ]
