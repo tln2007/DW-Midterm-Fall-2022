@@ -26,30 +26,37 @@ function Movie() {
     ))
   }, [movieData]);
 
-  // const imgData = useMemo (() => {
-  //   return Backgrounds.find((image) => (
-  //     image.id === movieData.title
-  //   ))
-  // }, [movieData]);
-  
-  console.log(movieData);
+  const imgData = useMemo (() => {
+    return Backgrounds.find((image) => (
+      image.id === movieData.title
+
+    ))
+  }, [movieData]);
 
 
   return (
     <div className="MoviePage">
-      {musicData && 
-      <audio autoPlay>
-        <source src={`/assets/${musicData.ost.src}`} type={musicData.ost.type}/>
-      </audio> }
-   
-      {/* <div className="MoviePage--background" style={{backgroundImage: `url('${imgData.image.src}')`, backgroundSize: "cover"}}>
-        
-      </div>  */}
+      {imgData && 
+      <div className="MoviePage--background" style={{backgroundImage: `url('/images/${imgData.image.src}')`, backgroundSize: "cover"}}>
+        <div className="MoviePage--audio">
+          {musicData && 
+          <audio autoPlay>
+            <source src={`/assets/${musicData.ost.src}`} type={musicData.ost.type}/>
+          </audio> }
+        </div>
+        <div className="MoviePage--title">
+          <h2>{movieData.title}</h2>
+          <h2>{movieData.original_title}</h2>
+        </div>
+        <div className="MoviePage--content">
+          <p>{movieData.description}</p>
+          {imgData &&
+          <img src={`/images/${imgData.characters.src}`}>
+          </img> }
+        </div>
       
-      <h2>{movieData.title}</h2>
-      <h2>{movieData.original_title}</h2>
-      <p>{movieData.description}</p>
-        
+      </div>}
+    
     </div>
   );
 }
