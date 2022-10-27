@@ -46,15 +46,16 @@ function Movie() {
         </div>
         <div className="MoviePage--title">
           <h2>{movieData.title}</h2>
-          <h2>{movieData.original_title}</h2>
         </div>
         <div className="MoviePage--content">
           <p>{movieData.description}</p>
+        </div>
+        <div className="MoviePage--pngs">
           {imgData &&
           <img src={`/images/${imgData.characters.src}`}>
           </img> }
         </div>
-      
+        
       </div>}
     
     </div>

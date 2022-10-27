@@ -211,7 +211,7 @@ export default [
     {
         "id": "When Marnie Was There",
         "image": {
-            "src": "when marnie was there bg.png",
+            "src": "when marnie was there bg.jpg",
             "alt": "When Marnie was there background"
         },
         "characters": {

@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
 .background {
     background-image: url("./components/bg.jpg");
     background-size: cover;
 }
 
-.h1 {
-    text-align: center;
-}
 .MovieCardWrapper {
     display:flex;
     flex-flow: row wrap;
@@ -30,7 +29,19 @@
     transition: transform 300ms ease;
 }
 
-.MoviePage {
-    margin-top: -20px;
+.MoviePage--background {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.MoviePage--title {
+    color: white;
+    font-family: 'Irish Grover', cursive;
+    font-size: x-large;
+    text-align: center;
+    text-shadow: 2px 2px #0B0B45;
+}
+
+
 
