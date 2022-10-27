@@ -38,7 +38,7 @@ function Movie() {
   return (
     <div className="MoviePage">
       {imgData && 
-      <div className="MoviePage--background" style={{backgroundImage: `url('/images/${imgData.image.src}')`, backgroundSize: "cover"}}>
+      <div className="MoviePage--background" style={{backgroundImage: `url('/images/${imgData.image.src}')`, backgroundSize: "cover",}}>
         <div className="MoviePage--audio">
           {musicData && 
           <audio autoPlay>
